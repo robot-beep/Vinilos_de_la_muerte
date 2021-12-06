@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/9458a7063c.js" crossorigin="anonymous"></script>
+    <!--CSS-->
+    <link rel="stylesheet" href="/css/main.css">
+
+    <title>TIENDA DE VINILOS</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="/">VINILOS DE LA MUERTE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form class="d-flex">
+                    <button class="btn btn-outline-dark">
+                        <i class="bi-cart-fill me-1"></i>
+                        <a href="/user-carrito">Carrito</a>
+                        <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
+                    </button>
+                    <% if (!user) { %>
+                        <button class="btn btn-outline-dark" type="submit">
+                            <i class="bi-cart-fill me-1"></i>
+                            <a href="/signin" class="navbar-brand">Sign In</a>
+                            <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
+                        </button>
+                        <button class="btn btn-outline-dark" type="submit">
+                            <i class="bi-cart-fill me-1"></i>
+                            <a href="/signup" class="navbar-brand">Sign Up</a>
+                            <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
+                        </button>
+                        <% } else { %>
+                            <% if (user.correo_cl  == "correo@correo.com"  ) { %>
+                                
+                                <button class="btn btn-outline-dark" type="submit">
+                                    <i class="bi-cart-fill me-1"></i>
+                                    <a href="/productos" class="navbar-brand">productos</a>
+                                    <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
+                                </button>
+                                <% } %>
+                            <button class="btn btn-outline-dark" type="submit">
+                                <i class="bi-cart-fill me-1"></i>
+                                <a href="/profile" class="navbar-brand">Profile</a>
+                                <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
+                            </button>
+                            <button class="btn btn-outline-dark" type="submit">
+                                <i class="bi-cart-fill me-1"></i>
+                                <a href="/logout" class="navbar-brand">Logout</a>
+                                <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
+                            </button>
+                        <% } %>
+                </form>
+            </div>
+        </div>
+    </nav>
+</body>

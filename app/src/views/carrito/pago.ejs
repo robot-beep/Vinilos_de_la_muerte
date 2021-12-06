@@ -1,0 +1,43 @@
+<%- include('../partials/_header'); -%>
+
+    <container class="container d-flex p-2">
+        <form action="/pago" method="POST">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email</label>
+                <input type="email" class="form-control" name='email' id="email" aria-describedby="emailHelp"
+                    placeholder="Email">
+                <small id="emailHelp" class="form-text text-muted">nunca compartiremos tu información con nadie</small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Nombre</label>
+                <input type="text" class="form-control" name='nombre' id="nombre" placeholder="Nombre">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Rut</label>
+                <input type="text" class="form-control" name='rut' id="rut" placeholder="Rut">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Telefono</label>
+                <input type="tel" class="form-control" name='telefono' id="telefono" placeholder="Telefono">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">dirección</label>
+                <input type="text" class="form-control" name='direccion' id='direccion' placeholder="Dirección">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Comuna</label>
+                <input type="text" class="form-control" name='comuna' id="comuna" placeholder="Comuna">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Región</label>
+                <input type="text" class="form-control" name='region' id="region" placeholder="Región">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Total a Pagar: $<%= total.total %></label>
+            </div>
+            <div class='d-inline-flex p-2'>
+                <button type="submit" class="btn btn-primary">Pagar</button>
+            </div>
+            
+        </form>
+        <container>

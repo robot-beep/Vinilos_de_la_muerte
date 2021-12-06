@@ -1,0 +1,57 @@
+<%- include('../partials/_header'); -%>
+
+<section class="h-100 gradient-form" style="background-color: #eee;">
+	<link rel="stylesheet" href="/css/signin.css">
+	<div class="container py-5 h-100">
+	  <div class="row d-flex justify-content-center align-items-center h-100">
+		<div class="col-xl-10">
+		  <div class="card rounded-3 text-black">
+			<div class="row g-0">
+			  <div class="col-lg-6">
+				<div class="card-body p-md-5 mx-md-4">
+  
+				  <div class="text-center">
+					<img src="https://www.andiar.com/990-thickbox_default/vinilo-calavera.jpg" style="width: 185px;" alt="logo">
+					<h4 clas="mt-1 mb-5 pb-1">Bienvenido</h4>
+				  </div>
+  
+				  <form action="/signin" method="POST">
+					<p>por favor ingresa tus datos de usuario</p>
+  
+					<div class="form-outline mb-4">
+					  <input type="email" name="correo_cl" class="form-control" placeholder="email"/>
+					  
+					</div>
+  
+					<div class="form-outline mb-4">
+					  <input type="password" name="contraseña_cl" class="form-control" placeholder="contraseña" />
+					  
+					</div>
+  
+					<div class="text-center pt-1 mb-5 pb-1">
+					  <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">Log in</button>
+					</div>
+  
+					<div class="d-flex align-items-center justify-content-center pb-4">
+					  <p class="mb-0 me-2">¿No tienes una cuenta?</p>
+					<a href="/signup">
+					  <button type="button" class="btn btn-outline-danger">Crea una cuenta</button>
+					</a>	
+					</div>
+  
+				  </form>
+  
+				</div>
+			  </div>
+			  <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+				<div class=" px-3 py-4 p-md-5 mx-md-4">
+				  <h4 class="mb-4">Somos tu lugar para comprar Vinilos</h4>
+				  <p class="small mb-0">Somos vinilos de la muertes, entregamos mas que experencia entregamos sentimientos al vender nuestro especiales vinilos de las muertes</p>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </section>

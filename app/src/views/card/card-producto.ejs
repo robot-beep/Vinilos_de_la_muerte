@@ -1,0 +1,35 @@
+<head>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<div class="container">
+    <main>
+        <div class="peliculas-recomendadas contenedor">
+            <div class="contenedor-principal">
+                <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i
+                        class="fas fa-angle-left"></i></button>
+                <div class="contenedor-carousel">
+                    <div class="carousel">
+                        <% for(var i=0; i < productos.length; i++) { %>
+                            <div class="pelicula">
+
+                                <a  href="./individual-card/<%= productos[i]._id %>" ><img src="/images/<%= productos[i].image %>" alt="" width="200"
+                                        height="230"></a>
+                                <h5 class="h5">
+                                    <%= productos[i].titulo %>
+                                </h5>
+                                <p class="p">
+                                    <%= productos[i].valor %>
+                                </p>
+
+
+                            </div>
+                            <% } %>
+                    </div>
+                </div>
+                <button role="button" id="flecha-derecha" class="flecha-derecha"><i
+                        class="fas fa-angle-right"></i></button>
+            </div>
+        </div>
+    </main>
+</div>

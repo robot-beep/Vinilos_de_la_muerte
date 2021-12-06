@@ -1,0 +1,69 @@
+<%- include('../partials/_header'); -%>
+
+    <div class="col-md-7 mx-auto">
+        <div class="card">
+            <div class="card-body">
+                <div class="container">
+                    <a href="/new-product" class="btn btn-info" role="button">Agregar producto</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--TABLA DE PRODUCTOS-->
+
+    <body>
+        <div class="col-md-7 mx-auto">
+            <div class="card">
+                <div class="card-header">
+                    <h3>TODOS LOS PRODUCTOS</h3>
+                </div>
+                <div class="card-body">
+                    <div class="container">
+                        <div class="row">
+                            <!-- TABLA -->
+                            <div class="col-md-7">
+                                <table class="table table-bordered tabler-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Num</th>
+                                            <th>Titulo</th>
+                                            <th>Autor</th>
+                                            <th>Formato</th>
+                                            <th>Genero</th>
+                                            <th>Estado</th>
+                                            <th>Descuento</th>
+                                            <th>Valor</th>
+                                            <th>Stock</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% for(var i = 0; i < productos.length; i++) { %>
+                                            <tr>
+                                                <td><%= i + 1 %></td>
+                                                <td><%= productos[i].titulo %></td>
+                                                <td><%= productos[i].autor %></td>
+                                                <td><%= productos[i].formato %></td>
+                                                <td><%= productos[i].genero %></td>
+                                                <td><%= productos[i].estado %></td>
+                                                <td><%= productos[i].descuento %></td>
+                                                <td><%= productos[i].valor %></td>
+                                                <td><%= productos[i].stock %></td>
+                                                
+                                                <td><a href="/delete/<%= productos[i]._id %>" class="btn btn-danger">Delete</a></td>
+                                                <td><a href="/modify/<%= productos[i]._id %>"><i class="fas fa-edit"></i></a></td>
+                                                
+                                            </tr> 
+                                        <% } %>   
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    
+    
+    </body>

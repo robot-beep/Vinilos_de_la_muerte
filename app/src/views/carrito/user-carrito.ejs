@@ -1,0 +1,58 @@
+<%- include('../partials/_header'); -%>
+
+<body>
+    <div class="col-md-7 mx-auto">
+        <div class="card">
+            <div class="card-header">
+                <h3>Productos en el Carrito</h3>
+            </div>
+            <div class="card-body">
+                <div class="container">
+                    <div class="row">
+                        <!-- TABLA -->
+                        <div class="col-md-7">
+                            <table class="table table-bordered tabler-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Num</th>
+                                        <th>Titulo</th>
+                                        <th>Autor</th>
+                                        <th>Formato</th>
+                                        <th>Genero</th>
+                                        <th>Estado</th>
+                                        <th>Descuento</th>
+                                        <th>Valor</th>
+                                        <th>Cantidad</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <% for(var i = 0; i < productos.length; i++) { %>
+                                        <tr>
+                                            <td><%= i + 1 %></td>
+                                            <td><%= productos[i].titulo %></td>
+                                            <td><%= productos[i].autor %></td>
+                                            <td><%= productos[i].formato %></td>
+                                            <td><%= productos[i].genero %></td>
+                                            <td><%= productos[i].estado %></td>
+                                            <td>%<%= productos[i].descuento %></td>
+                                            <td>$<%= productos[i].valor %></td>
+                                            <td><%= cantidad[i] %></td>
+                                            
+                                            
+                                        </tr> 
+                                    <% } %>
+                                    
+                                </tbody>
+                            </table>
+                            <div><td><a>$ <%= total %></a></td></div>
+                            <div><td><a href="/pagar/<%= total %>" class="btn btn-danger">Pagar</a></td></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+</body>

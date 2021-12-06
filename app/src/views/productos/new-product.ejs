@@ -1,0 +1,57 @@
+<%- include('../partials/_header'); -%>
+
+
+    <!--FORMULARIO DE NUEVO PRODUCTO-->
+    <body>
+        <div class="col-md-4 mx-auto">
+            <div class="card">
+                <div class="card-header">
+                    <h3>NUEVO PRODUCTO</h3>
+                </div>
+                <div class="card-body">
+                    <form action="/add" method="POST" enctype="multipart/form-data">
+    
+                        <div class="form-group">
+                            <input type="text" name="titulo" class="form-control" placeholder="Titulo" autofocus>
+                        </div>
+    
+                        <div class="form-group">
+                            <input type="text" name="autor" placeholder="Ingresa autor" class="form-control">
+                        </div>
+    
+                        <div class="form-group">
+                            <input type="text" name="formato" placeholder="Formato" class="form-control">
+                        </div>
+    
+                        <div class="form-group">
+                            <input type="text" name="genero" placeholder="genero" class="form-control">
+                        </div>
+    
+                        <div class="form-group">
+                            <input type="text" name="estado" placeholder="Estado" class="form-control">
+                        </div>
+    
+                        <div class="form-group">
+                            <input type="text" name="descuento" placeholder="descuento" class="form-control">
+                        </div>
+    
+                        <div class="form-group">
+                            <input type="text" name="valor" placeholder="valor" class="form-control">
+                        </div>
+    
+                        <div class="form-group">
+                            <input type="text" name="stock" placeholder="stock" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="image">Subir Imagen</label>
+                            <input type="file" name="image" id="image" class="form-control-file">
+                        </div>
+    
+    
+                        <button type="submit" class="btn btn-primary btn-block">AGREGAR</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>

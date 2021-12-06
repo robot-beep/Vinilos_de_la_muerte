@@ -1,0 +1,59 @@
+<%- include('../partials/_header'); -%>
+<!--FORMULARIO DE MODIFICACIÓN-->
+<body>
+    <div class="col-md-4 mx-auto">
+        <div class="card">
+            <div class="card-header">
+                <h3>MODIFICAR PRODUCTO</h3>
+            </div>
+            <div class="card-body">
+                <form action="/modify-product/<%= producto._id %>" method="POST">
+                    <div class="form-group">
+                        <h3>Titulo</h3>
+                        <input type="text" name="titulo" class="form-control" placeholder="Titulo" value="<%= producto.titulo %>">
+                    </div>
+
+                    <div class="form-group">
+                        <h3>Autor</h3>
+                        <input type="text" name="autor" class="form-control" placeholder="Autor"
+                        value="<%= producto.autor %>">
+                    </div>
+
+                    <div class="form-group">
+                        <h3>Formato</h3>
+                        <input type="text" name="formato" class="form-control" placeholder="Formato"
+                        value="<%= producto.formato %>">
+                    </div>
+
+                    <div class="form-group">
+                        <h3>Genero</h3>
+                        <input type="text" name="genero" class="form-control" placeholder="Genero"
+                        value="<%= producto.genero %>">
+                    </div>
+                    
+                    <div class="form-group">
+                        <h3>Estado</h3>
+                        <input type="text" name="estado" class="form-control" placeholder="Estado"
+                        value="<%= producto.estado %>">
+                    </div>
+
+                    <div class="form-group">
+                        <h3>Descuento</h3>
+                        <input type="text" name="descuento" class="form-control" placeholder="Autor"
+                        value="<%= producto.descuento %>">
+                    </div>
+
+
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-block" type="submit">UPDATE</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+
